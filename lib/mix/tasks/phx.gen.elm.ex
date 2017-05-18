@@ -29,6 +29,7 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
         }
 
     2. add 'elm' to the 'watched' array in your brunch-config.js
+       You may also want to add '/elm\\.js/' to the babel ignore pattern to speed up compilation
 
 
     3. in your app.js file add the following
@@ -44,6 +45,9 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
 
 
         get "/", ElmController, :index
+
+
+    after starting the server for the first time it's worth saving `app.js` to make sure it registers the newly compiled elm.js file
 
 
     """
