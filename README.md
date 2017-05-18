@@ -1,4 +1,4 @@
-# Elm Gen
+# Phoenix Elm Gen
 
 Mix Task to generate an elm app plus the necessary scaffolding for a Phoenix 1.3 app
 
