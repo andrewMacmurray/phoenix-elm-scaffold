@@ -1,6 +1,5 @@
 defmodule Mix.Tasks.Phx.Gen.Elm do
   use Mix.Task
-  import Mix.Generator
 
   @shortdoc "Generates an elm app with all the necessary scaffolding"
 
@@ -79,7 +78,7 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
 
   defp copy_files(templates) do
     Mix.Phoenix.copy_from(
-      [Mix.Phoenix.otp_app()], @src, "", [app_name: app_module_name()], templates
+      [:elm_gen], @src, "", [app_name: app_module_name()], templates
     )
   end
 
