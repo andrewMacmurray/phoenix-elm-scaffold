@@ -128,6 +128,7 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
     ]
 
     change_dir = "cd assets"
+    pre_install = "npm install"
     node_install_deps = "npm install -S " <> Enum.join(deps, " ")
     node_install_dev_deps = "npm install -D " <> Enum.join(dev_deps, " ")
 
@@ -137,6 +138,7 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
 
     all_cmds = [
       change_dir,
+      pre_install,
       node_install_deps,
       node_install_dev_deps,
       elm_install,
