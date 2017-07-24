@@ -110,7 +110,7 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
   end
 
   defp app_module_name do
-    Mix.Phoenix.otp_app()
+    Mix.Phoenix.context_app()
     |> Atom.to_string
     |> String.split("_")
     |> Enum.map(&String.capitalize/1)
@@ -130,13 +130,17 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
     change_dir = "cd assets"
     node_install_deps = "npm install -S " <> Enum.join(deps, " ")
     node_install_dev_deps = "npm install -D " <> Enum.join(dev_deps, " ")
+
+    # TODO: make these not depend on a global version of elm
     elm_install = "elm-package install -y"
+    elm_compile = "elm-make elm/Main.elm --output=js/elm.js"
 
     all_cmds = [
       change_dir,
       node_install_deps,
       node_install_dev_deps,
-      elm_install
+      elm_install,
+      elm_compile
     ]
 
     cmd = Enum.join(all_cmds, " && ")
