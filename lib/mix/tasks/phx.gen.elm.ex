@@ -76,8 +76,9 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
   end
 
   defp web_dir(path) do
-    web_path = Mix.Phoenix.web_prefix()
-    Path.join(web_path, path)
+    Mix.Phoenix.context_app()
+    |> Mix.Phoenix.web_path()
+    |> Path.join(path)
   end
 
   defp copy_files(templates) do
