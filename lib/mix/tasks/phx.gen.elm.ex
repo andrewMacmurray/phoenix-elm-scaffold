@@ -46,10 +46,6 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
 
         get "/", ElmController, :index
 
-
-    after starting the server for the first time it's worth saving `app.js` to make sure it registers the newly compiled elm.js file
-
-
     """
 
     Mix.shell.info(instructions)
