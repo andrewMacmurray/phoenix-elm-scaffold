@@ -1,4 +1,4 @@
-# Phoenix Elm Gen
+# Phoenix Elm Scaffold
 
 Mix Task to generate an elm app plus the necessary scaffolding for a Phoenix 1.3 app
 
@@ -8,7 +8,7 @@ Install the package by adding this to `deps` and running `mix deps.get`
 
 ```elixir
 def deps do
-  [{:elm_gen, git: "https://github.com/andrewMacmurray/phoenix-elm-gen"}]
+  [{:elm_scaffold, "~> 0.1.0"}]
 end
 ```
 
@@ -59,7 +59,7 @@ elmBrunch: {
   mainModules: ['elm/Main.elm'],
   outputFile: 'elm.js',
   outputFolder: '../assets/js',
-  makeParameters: ['--debug']
+  makeParameters: ['--debug'] // optional debugger for development
 }
 ```
 
@@ -68,8 +68,8 @@ elmBrunch: {
 
 ```js
 babel: {
-      ignore: [/vendor/, /elm\.js/]
-    }
+  ignore: [/vendor/, /elm\.js/]
+}
 ```
 
 

@@ -2,6 +2,60 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
   use Mix.Task
 
   @shortdoc "Generates an elm app with all the necessary scaffolding"
+  @moduledoc """
+  Generates an elm app with all the necessary scaffolding
+
+  adds:
+  - elm files (`Main`, `Model`, `View`, `Update`)
+  - an embed script
+  - `elm-package.json`
+  - A phoenix `controller`, `view` and `template`
+  - an `elm-test` setup
+
+  to run the generator:
+  
+  ```sh
+  > mix phx.gen.elm
+  ```
+  then follow post install instructions:
+
+  1. add the following to the `plugins` section of your `brunch-config.js`
+
+    ```js
+    elmBrunch: {
+      mainModules: ['elm/Main.elm'],
+      outputFile: 'elm.js',
+      outputFolder: '../assets/js',
+      makeParameters: ['--debug'] // optional debugger for development
+    }
+    ```
+
+  2. add `elm` to the `watched` array in your `brunch-config.js`
+     You may also want to add `/elm\\.js/` to the babel ignore pattern to speed up compilation
+
+    ```js
+    babel: {
+      ignore: [/vendor/, /elm\.js/]
+    }
+    ```
+
+
+  3. in your `app.js` file add the following
+
+    ```js
+    import ElmApp from './elm.js'
+    import elmEmbed from './elm-embed.js'
+
+    elmEmbed.init(ElmApp)
+    ```
+
+  4. and finally in your `router.ex` file add
+
+    ```elixir
+    get "/path-to-elm-app", ElmController, :index
+    ```
+
+  """
 
   @src "priv/templates/phx.gen.elm"
 
@@ -25,7 +79,7 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
           mainModules: ['elm/Main.elm'],
           outputFile: 'elm.js',
           outputFolder: '../assets/js',
-          makeParameters: ['--debug']
+          makeParameters: ['--debug'] // optional debugger for development
         }
 
     2. add 'elm' to the 'watched' array in your brunch-config.js
@@ -44,7 +98,7 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
     4. and finally in your 'router.ex' file add
 
 
-        get "/", ElmController, :index
+        get "/path-to-elm-app", ElmController, :index
 
     """
 
