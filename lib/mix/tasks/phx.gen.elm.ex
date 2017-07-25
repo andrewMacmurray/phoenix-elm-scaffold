@@ -1,9 +1,9 @@
 defmodule Mix.Tasks.Phx.Gen.Elm do
   use Mix.Task
 
-  @shortdoc "Generates an elm app with all the necessary scaffolding"
+  @shortdoc "Generates an elm app inside a Phoenix (1.3) app with the necessary scaffolding"
   @moduledoc """
-  Generates an elm app with all the necessary scaffolding
+  Generates an elm app inside a Phoenix (1.3) app with the necessary scaffolding
 
   adds:
   - elm files (`Main`, `Model`, `View`, `Update`)
@@ -13,7 +13,7 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
   - an `elm-test` setup
 
   to run the generator:
-  
+
   ```sh
   > mix phx.gen.elm
   ```

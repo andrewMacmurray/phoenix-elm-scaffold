@@ -1,6 +1,6 @@
 # Phoenix Elm Scaffold
 
-Mix Task to generate an elm app plus the necessary scaffolding for a Phoenix 1.3 app
+Mix Task to generate an elm app inside a Phoenix (1.3) app with the necessary scaffolding
 
 ## Installation
 
@@ -8,7 +8,7 @@ Install the package by adding to `deps` and run `mix deps.get`
 
 ```elixir
 def deps do
-  [{:elm_scaffold, "~> 0.1.0"}]
+  [{:phoenix_elm_scaffold, "~> 0.1.0"}]
 end
 ```
 

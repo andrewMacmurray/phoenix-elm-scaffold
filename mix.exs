@@ -4,8 +4,8 @@ defmodule ElmScaffold.Mixfile do
   @github_url "https://github.com/andrewMacmurray/phoenix-elm-scaffold"
 
   def project do
-    [app: :elm_scaffold,
-     name: "Elm Scaffold",
+    [app: :phoenix_elm_scaffold,
+     name: "Phoenix Elm Scaffold",
      version: "0.1.0",
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
@@ -29,7 +29,7 @@ defmodule ElmScaffold.Mixfile do
 
   defp description do
     """
-    A mix task to generate scaffolding for an elm app
+    A mix task to generate scaffolding for an elm app inside a Phoenix (1.3) app
     """
   end
 
