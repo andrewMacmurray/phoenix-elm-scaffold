@@ -23,7 +23,7 @@ defmodule ElmScaffold.Mixfile do
   end
 
   defp deps do
-    [{:phoenix, "~> 1.3.0-rc"},
+    [{:phoenix, "~> 1.3.0"},
      {:ex_doc, "~> 0.14", only: :dev}]
   end
 
