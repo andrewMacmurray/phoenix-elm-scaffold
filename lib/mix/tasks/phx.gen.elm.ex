@@ -133,7 +133,7 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
 
   defp copy_files(templates) do
     Mix.Phoenix.copy_from(
-      [:elm_gen], @src, [app_name: app_module_name()], templates
+      [:phoenix_elm_scaffold], @src, [app_name: app_module_name()], templates
     )
   end
 
