@@ -8,7 +8,7 @@ Install the package by adding to `deps` and run `mix deps.get`
 
 ```elixir
 def deps do
-  [{:phoenix_elm_scaffold, "~> 0.2.1"}]
+  [{:phoenix_elm_scaffold, "~> 0.2.2"}]
 end
 ```
 
