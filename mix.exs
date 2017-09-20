@@ -6,7 +6,7 @@ defmodule ElmScaffold.Mixfile do
   def project do
     [app: :phoenix_elm_scaffold,
      name: "Phoenix Elm Scaffold",
-     version: "0.2.1",
+     version: "0.2.2",
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
