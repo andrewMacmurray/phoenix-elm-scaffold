@@ -56,6 +56,7 @@ after the command has finished follow the next steps:
 
 ```js
 elmBrunch: {
+  elmFolder: ".", // Set to path where elm-package.json is located, defaults to project root
   mainModules: ['elm/Main.elm'],
   outputFile: 'elm.js',
   outputFolder: '../assets/js',
