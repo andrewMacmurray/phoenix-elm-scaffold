@@ -8,7 +8,7 @@ Install the package by adding to `deps` and run `mix deps.get`
 
 ```elixir
 def deps do
-  [{:phoenix_elm_scaffold, "~> 0.2.3"}]
+  [{:phoenix_elm_scaffold, "~> 0.2.4"}]
 end
 ```
 
@@ -26,8 +26,8 @@ this will generate the following files and run install commands:
 ├── assets
 │   ├── elm
 │   │   ├── Main.elm
-│   │   ├── Model.elm
-│   │   ├── Update.elm
+│   │   ├── State.elm
+│   │   ├── Types.elm
 │   │   └── View.elm
 │   ├── elm-package.json
 │   ├── js

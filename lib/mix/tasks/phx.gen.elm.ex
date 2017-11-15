@@ -72,7 +72,7 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
     update_time_created()
   end
 
-  def post_install_instructions do
+  defp post_install_instructions do
     instructions = """
 
     🎉 ✨  Your elm app is almost ready to go! ✨ 🎉
