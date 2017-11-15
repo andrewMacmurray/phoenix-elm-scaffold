@@ -1,6 +1,6 @@
 module State exposing (..)
 
-import Model exposing (..)
+import Types exposing (..)
 
 
 init : ( Model, Cmd Msg )
