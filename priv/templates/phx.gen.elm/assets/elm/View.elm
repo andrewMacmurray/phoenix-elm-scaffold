@@ -7,7 +7,7 @@ import Model exposing (..)
 
 view : Model -> Html Msg
 view model =
-    div [ style styles ] [ text "your idea goes here" ]
+    div [ style styles ] [ text "your app goes here" ]
 
 
 styles : List ( String, String )
