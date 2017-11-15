@@ -7,7 +7,7 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
 
       ```js
       elmBrunch: {
-        elm-folder: '.',
+        elmFolder: '.',
         mainModules: ['elm/Main.elm'],
         outputFile: 'elm.js',
         outputFolder: '../assets/js',
