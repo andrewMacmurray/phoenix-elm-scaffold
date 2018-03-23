@@ -119,9 +119,9 @@ defmodule Mix.Tasks.Phx.Gen.Elm do
   defp copy_elm_files do
     files = [
       "assets/elm/Main.elm",
-      "assets/elm/Update.elm",
+      "assets/elm/State.elm",
       "assets/elm/View.elm",
-      "assets/elm/Model.elm",
+      "assets/elm/Types.elm",
       "assets/js/elm-embed.js",
       "assets/elm-package.json",
       "test/elm/Main.elm",
